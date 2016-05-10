@@ -1,0 +1,47 @@
+<resources>
+
+    <style name="App" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:background">#FF0000</item>-->
+        <!--<item name="android:windowBackground">#FF0000</item>-->
+        <!--<item name="android:colorBackground">#FF0000</item>-->
+    </style>
+
+    <style name="App.TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppDark" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <!--<item name="android:background">#FFF000</item>-->
+        <!--<item name="android:windowBackground">#FFF000</item>-->
+        <!--<item name="android:colorBackground">#FFF000</item>-->
+    </style>
+
+    <style name="App.NoActionBar" parent="App">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppDark.NoActionBar" parent="AppDark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppDark.TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">#0000FF</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="App.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="App.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

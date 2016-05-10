@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ktung.watchit.ui.shows.EpisodeActivity"
+    tools:showIn="@layout/ac_episode"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/epImage"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/epTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/checkinButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkin"
+            android:layout_below="@+id/epOverview"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp" />
+        <Button
+            android:id="@+id/watchedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/watched"
+            android:layout_alignTop="@+id/checkinButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/epOverview"
+            android:layout_below="@+id/epRating"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/epRating"
+            android:layout_below="@+id/epTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/epTrakt"
+            android:layout_alignTop="@+id/epRating"
+            android:layout_toLeftOf="@+id/epRating"
+            android:layout_toStartOf="@+id/epRating"
+            android:layout_marginRight="3dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:maxWidth="20dp"
+            android:maxHeight="20dp"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/ac_show"
+    tools:context=".ui.shows.ShowActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showPoster"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/showSynopsis"
+        android:layout_below="@+id/showPoster"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showGenres"
+        android:layout_below="@+id/showSynopsis"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showCertification"
+        android:layout_below="@+id/showGenres"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showNetwork"
+        android:layout_below="@+id/showGenres"
+        android:layout_toRightOf="@+id/showCertification"
+        android:layout_toEndOf="@+id/showCertification" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showFirstAired"
+        android:layout_below="@+id/showGenres"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_watchlist"
+        android:id="@+id/addToWatchlistButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seasonSpinner"
+        android:layout_below="@+id/showCertification"
+        android:layout_centerHorizontal="true" />
+    <org.lucasr.twowayview.TwoWayView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/episodesListView"
+        android:orientation="horizontal"
+        android:layout_below="@+id/seasonSpinner"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
