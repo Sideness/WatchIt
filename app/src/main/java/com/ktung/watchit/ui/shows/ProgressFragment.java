@@ -3,6 +3,7 @@ package com.ktung.watchit.ui.shows;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,8 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class ProgressFragment extends RxFragment implements AdapterView.OnItemClickListener {
+    @Bind(R.id.showsSwipeContainer)
+    protected SwipeRefreshLayout showsSwipeContainer;
     @Bind(R.id.showsListView)
     protected ListView showsListView;
 
@@ -40,8 +43,14 @@ public class ProgressFragment extends RxFragment implements AdapterView.OnItemCl
 
         shows = new ArrayList<>();
         trakt = Trakt.getInstance();
-        loadList();
+        showsSwipeContainer.setOnRefreshListener(this::loadList);
+        showsSwipeContainer.setColorSchemeResources(
+            android.R.color.holo_blue_bright,
+            android.R.color.holo_green_light,
+            android.R.color.holo_orange_light,
+            android.R.color.holo_red_light);
         showsListView.setOnItemClickListener(this);
+        loadList();
 
         return view;
     }
@@ -59,6 +68,7 @@ public class ProgressFragment extends RxFragment implements AdapterView.OnItemCl
                         shows.add(response);
                     }
                     setProgressAdapter();
+                    showsSwipeContainer.setRefreshing(false);
                 }
             });
         }
